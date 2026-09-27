@@ -1,0 +1,176 @@
+{
+  "version": 2,
+  "seed": 42,
+  "purpose": "Fixed-budget augmentation pipeline comparison; development calibration first, then the separately frozen metadata benchmark",
+  "device": "cpu",
+  "query_pixels_used": false,
+  "development_manifest": "data/local/augmentation-pilot-v1/manifest.json",
+  "development_output": "outputs/formal-augmentation-synthesis-development100-v1",
+  "benchmark_manifest": "data/local/formal-augmentation-benchmark1000-v1/manifest.json",
+  "benchmark_output": "outputs/formal-augmentation-synthesis-benchmark1000-v1",
+  "methods": [
+    "original_2d",
+    "icpr_hong",
+    "sam_3d",
+    "li2022_style"
+  ],
+  "view_budget_candidates": {
+    "2": [
+      0,
+      1
+    ],
+    "6": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "original_per_class": 1,
+  "canvas_wh": [
+    640,
+    480
+  ],
+  "native_saved_canvas_wh": [
+    642,
+    482
+  ],
+  "native_canvas_correction": "Original sampler's nominal 640x480 viewport produces a 642x482 raster. Preserve it. Li maps within the nominal 640x480 then adds one pixel to x/y at placement; all synthetic external backgrounds resize to the actual 642x482 raster.",
+  "icpr_sam_poses": [
+    [
+      [
+        -30,
+        0,
+        250
+      ],
+      [
+        10,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        30,
+        0,
+        250
+      ],
+      [
+        10,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        235
+      ],
+      [
+        10,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        265
+      ],
+      [
+        10,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        -15,
+        250
+      ],
+      [
+        -10,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        15,
+        250
+      ],
+      [
+        10,
+        0,
+        0
+      ]
+    ]
+  ],
+  "icpr_sam_output": "Preserve each original sampler's full native projection canvas; shared background source per source/view and original compositor. Do not rescale the native projected foreground.",
+  "background_policy": "Development retains the hash-verified pilot assignments. New benchmark samples six distinct SHA-deduplicated backgrounds per source with random.Random(int(SHA256('42:' + source_id),16)); same assignment across successful geometry methods.",
+  "background_interpolation": "OpenCV INTER_LINEAR resize to actual native raster 642x482, matching original compositor; nominal projection viewport remains 640x480",
+  "two_dimensional_policy": "Recovered original whole-image 2D augmentation, including its original scene background. No new foreground masking or background replacement. This is an end-to-end pipeline baseline.",
+  "li": {
+    "ratio": 10,
+    "selection_disclosure": "Inherited previous development-selected ratio 10; not newly tuned and not a literature-reported optimum",
+    "views": [
+      [
+        "horizontal",
+        -20.0
+      ],
+      [
+        "horizontal",
+        20.0
+      ],
+      [
+        "depth",
+        0.75
+      ],
+      [
+        "depth",
+        1.25
+      ],
+      [
+        "vertical",
+        -15.0
+      ],
+      [
+        "vertical",
+        15.0
+      ]
+    ],
+    "input": "Unchanged original RGB, SAM mask bbox crop; black RGB outside mask; max side 256 without upscaling; outer silhouette crop support",
+    "geometry": "Existing corrected aug.li2022.augment; maximum valid rectangle then resize back to prepared crop size; do not undo this published crop-normalization implementation",
+    "placement": "Map source SAM bbox onto a centered aspect-preserving letterbox fit of the entire source image inside 640x480. Let s=min(640/W,480/H), offsets=((640-W*s)/2,(480-H*s)/2); round each mapped bbox endpoint using Python round (ties-to-even), clamp to canvas, require positive rectangle. Resize tight Li output to that rectangle with PIL bilinear, then paste as an opaque rectangle onto the paired background. No alpha inference from black pixels; internal black mask holes remain black.",
+    "bbox_fallback": "For newly generated Li, unavailable or invalid SAM foreground triggers exact paired 2D fallback for all six slots. Development source-bbox full-image fallback does not occur among the 100 reused sources.",
+    "geometry_fallback": "New source/SAM semantic failure or expected Li geometry ValueError uses the exact same source/view original_2d bytes without compositing. Invalid, nonfinite or constant synthetic Li view also uses that paired 2D view. Timeout, resource failure, missing inputs, hash/invariant failure or unexpected infrastructure failure stops the run and is preserved, not treated as normal fallback."
+  },
+  "fairness_limit": "Shared counts, source roles, external background assignments and training budgets do not equate object scale, foreground visibility, interpolation, internal backgrounds, or preprocessing. ICPR/SAM native projections, Li source-relative placement, and whole-image 2D differ. Results compare complete pipelines; geometry-only causation requires an additional matched-foreground control and is not claimed.",
+  "fallback_policy": "All four new methods preserve every source/view. ICPR/SAM/Li failed slots reuse the exact paired original_2d augmentation bytes, without another compositor. Missing/infrastructure failures stop and require investigation instead of silently selecting easy cases.",
+  "development_reuse": "Hash-verify existing banks, generation/input audits, Li log and every reused image. Reuse without overwriting historical artifacts. Generate only Li full-canvas images.",
+  "human_approval": "No synthetic output or metadata is treated as human-confirmed annotation",
+  "workers": 4,
+  "worker_timeout_seconds": 300,
+  "supersedes_for_new_benchmark": "configs/formal-augmentation-synthesis-v1.json; existing development banks unchanged because all 600 Li ratio10 views succeeded",
+  "resource_policy": {
+    "cpu_worker_limit": 4,
+    "thread_environment": {
+      "OMP_NUM_THREADS": 1,
+      "OPENBLAS_NUM_THREADS": 1,
+      "MKL_NUM_THREADS": 1,
+      "NUMEXPR_NUM_THREADS": 1
+    },
+    "opencv_threads_per_worker": 1,
+    "minimum_available_commit_bytes": 4294967296,
+    "prelaunch": "Wait until Windows available commit is at least 4 GiB; this naturally reduces active concurrency as completed workers free resources. No algorithm shortcuts.",
+    "record": "Per-worker process-tree peak RSS, prelaunch/min available commit, walltime, exit/timeout",
+    "failure": "Timeout/resources stop queued work; successful cases remain hash-verified and resumable. No normal fallback for infrastructure failure.",
+    "priority": "Frozen hash100 subset gallery IDs first, remaining900 next; no new selection. Per-method ablation bank publishes only after all100 successful result records."
+  }
+}

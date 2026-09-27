@@ -1,0 +1,332 @@
+{
+  "T3": {
+    "frozen_raw": {
+      "recall_at_1": {
+        "mean": 0.9473806752037253,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "recall_at_5": {
+        "mean": 0.9816065192083818,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "recall_at_10": {
+        "mean": 0.9846332945285216,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "recall_at_20": {
+        "mean": 0.9871944121071012,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "macro_recall_at_1": {
+        "mean": 0.9479473152509584,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "macro_recall_at_5": {
+        "mean": 0.9754974549914379,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "macro_recall_at_10": {
+        "mean": 0.9780270320648585,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "macro_recall_at_20": {
+        "mean": 0.9806343650793651,
+        "sample_sd": null,
+        "runs": 1
+      }
+    },
+    "original_2d": {
+      "recall_at_1": {
+        "mean": 0.7055490880869227,
+        "sample_sd": 0.020550143183589557,
+        "runs": 3
+      },
+      "recall_at_5": {
+        "mean": 0.7907644547923942,
+        "sample_sd": 0.014074757194849796,
+        "runs": 3
+      },
+      "recall_at_10": {
+        "mean": 0.8223515715948778,
+        "sample_sd": 0.01659303916423451,
+        "runs": 3
+      },
+      "recall_at_20": {
+        "mean": 0.8534730306558013,
+        "sample_sd": 0.0106041559232908,
+        "runs": 3
+      },
+      "macro_recall_at_1": {
+        "mean": 0.7017688527414311,
+        "sample_sd": 0.013238755625766053,
+        "runs": 3
+      },
+      "macro_recall_at_5": {
+        "mean": 0.7814326832302139,
+        "sample_sd": 0.013072837212185169,
+        "runs": 3
+      },
+      "macro_recall_at_10": {
+        "mean": 0.8153324960789616,
+        "sample_sd": 0.013825303424747764,
+        "runs": 3
+      },
+      "macro_recall_at_20": {
+        "mean": 0.8433881608685526,
+        "sample_sd": 0.008301841529015974,
+        "runs": 3
+      }
+    },
+    "icpr_hong": {
+      "recall_at_1": {
+        "mean": 0.8110205665502522,
+        "sample_sd": 0.022602795256345037,
+        "runs": 3
+      },
+      "recall_at_5": {
+        "mean": 0.8783081102056656,
+        "sample_sd": 0.01648706811617459,
+        "runs": 3
+      },
+      "recall_at_10": {
+        "mean": 0.8987194412107101,
+        "sample_sd": 0.012695046221388189,
+        "runs": 3
+      },
+      "recall_at_20": {
+        "mean": 0.9182770663562282,
+        "sample_sd": 0.008899424844524507,
+        "runs": 3
+      },
+      "macro_recall_at_1": {
+        "mean": 0.8193689638827212,
+        "sample_sd": 0.013045330939720629,
+        "runs": 3
+      },
+      "macro_recall_at_5": {
+        "mean": 0.8782525206251551,
+        "sample_sd": 0.014495766244471648,
+        "runs": 3
+      },
+      "macro_recall_at_10": {
+        "mean": 0.9017834153048015,
+        "sample_sd": 0.013435077277009794,
+        "runs": 3
+      },
+      "macro_recall_at_20": {
+        "mean": 0.9216657145236122,
+        "sample_sd": 0.009208404359177597,
+        "runs": 3
+      }
+    },
+    "sam_3d": {
+      "recall_at_1": {
+        "mean": 0.8551028327512612,
+        "sample_sd": 0.01324535049635413,
+        "runs": 3
+      },
+      "recall_at_5": {
+        "mean": 0.9261156383391539,
+        "sample_sd": 0.0106041559232908,
+        "runs": 3
+      },
+      "recall_at_10": {
+        "mean": 0.9393868839736127,
+        "sample_sd": 0.011110922882839436,
+        "runs": 3
+      },
+      "recall_at_20": {
+        "mean": 0.950407450523865,
+        "sample_sd": 0.007750089395619682,
+        "runs": 3
+      },
+      "macro_recall_at_1": {
+        "mean": 0.8720615519485673,
+        "sample_sd": 0.014522223606607328,
+        "runs": 3
+      },
+      "macro_recall_at_5": {
+        "mean": 0.924411478037071,
+        "sample_sd": 0.00885319645029309,
+        "runs": 3
+      },
+      "macro_recall_at_10": {
+        "mean": 0.9357946428761627,
+        "sample_sd": 0.00799971970812524,
+        "runs": 3
+      },
+      "macro_recall_at_20": {
+        "mean": 0.9442008872700843,
+        "sample_sd": 0.005933721190182261,
+        "runs": 3
+      }
+    },
+    "li2022_style": {
+      "recall_at_1": {
+        "mean": 0.8384167636786962,
+        "sample_sd": 0.011592446365079938,
+        "runs": 3
+      },
+      "recall_at_5": {
+        "mean": 0.9119906868451687,
+        "sample_sd": 0.011690235353325414,
+        "runs": 3
+      },
+      "recall_at_10": {
+        "mean": 0.9280558789289871,
+        "sample_sd": 0.011564354773632253,
+        "runs": 3
+      },
+      "recall_at_20": {
+        "mean": 0.9416375630578191,
+        "sample_sd": 0.007934421680485564,
+        "runs": 3
+      },
+      "macro_recall_at_1": {
+        "mean": 0.8534983700018444,
+        "sample_sd": 0.0020921734578025924,
+        "runs": 3
+      },
+      "macro_recall_at_5": {
+        "mean": 0.9095354926328212,
+        "sample_sd": 0.004184799877213055,
+        "runs": 3
+      },
+      "macro_recall_at_10": {
+        "mean": 0.9255398605600317,
+        "sample_sd": 0.004780208444062039,
+        "runs": 3
+      },
+      "macro_recall_at_20": {
+        "mean": 0.9366819651440209,
+        "sample_sd": 0.0035664219793221804,
+        "runs": 3
+      }
+    }
+  },
+  "R": {
+    "frozen_raw": {
+      "recall_at_1": {
+        "mean": 0.3408614668218859,
+        "sample_sd": null
+      },
+      "recall_at_5": {
+        "mean": 0.4686845168800931,
+        "sample_sd": null
+      },
+      "recall_at_10": {
+        "mean": 0.5236321303841677,
+        "sample_sd": null
+      },
+      "recall_at_20": {
+        "mean": 0.5853317811408615,
+        "sample_sd": null
+      },
+      "macro_recall_at_1": {
+        "mean": 0.3686958597894194,
+        "sample_sd": null
+      }
+    },
+    "original_2d": {
+      "recall_at_1": {
+        "mean": 0.4427629025999224,
+        "sample_sd": 0.05615006654524461
+      },
+      "recall_at_5": {
+        "mean": 0.5624369421808304,
+        "sample_sd": 0.05861294374927343
+      },
+      "recall_at_10": {
+        "mean": 0.6137369033760186,
+        "sample_sd": 0.05619381592340593
+      },
+      "recall_at_20": {
+        "mean": 0.6714784633294529,
+        "sample_sd": 0.05279160399006516
+      },
+      "macro_recall_at_1": {
+        "mean": 0.47516979128091075,
+        "sample_sd": 0.05553478713554575
+      }
+    },
+    "icpr_hong": {
+      "recall_at_1": {
+        "mean": 0.6263872720217307,
+        "sample_sd": 0.014589164303984528
+      },
+      "recall_at_5": {
+        "mean": 0.7509507178890183,
+        "sample_sd": 0.011081610709259797
+      },
+      "recall_at_10": {
+        "mean": 0.7944121071012806,
+        "sample_sd": 0.007623145771243261
+      },
+      "recall_at_20": {
+        "mean": 0.8344586728754365,
+        "sample_sd": 0.005707869928815485
+      },
+      "macro_recall_at_1": {
+        "mean": 0.6529971551385462,
+        "sample_sd": 0.01724165256970522
+      }
+    },
+    "sam_3d": {
+      "recall_at_1": {
+        "mean": 0.635778036476523,
+        "sample_sd": 0.023059855320051233
+      },
+      "recall_at_5": {
+        "mean": 0.7618936748156772,
+        "sample_sd": 0.019236700236470523
+      },
+      "recall_at_10": {
+        "mean": 0.8072176949941793,
+        "sample_sd": 0.015451138554632926
+      },
+      "recall_at_20": {
+        "mean": 0.843150950717889,
+        "sample_sd": 0.010851757119756862
+      },
+      "macro_recall_at_1": {
+        "mean": 0.6614572177190082,
+        "sample_sd": 0.020696565596613054
+      }
+    },
+    "li2022_style": {
+      "recall_at_1": {
+        "mean": 0.6366317423360496,
+        "sample_sd": 0.0016353362441370034
+      },
+      "recall_at_5": {
+        "mean": 0.7580908032596042,
+        "sample_sd": 0.00495548234081322
+      },
+      "recall_at_10": {
+        "mean": 0.8011641443538999,
+        "sample_sd": 0.0009313154831199211
+      },
+      "recall_at_20": {
+        "mean": 0.8395809080325961,
+        "sample_sd": 0.0016130857346392264
+      },
+      "macro_recall_at_1": {
+        "mean": 0.6535456151248554,
+        "sample_sd": 0.0060332037615715385
+      }
+    }
+  },
+  "G_selection": {
+    "original_2d": 100,
+    "icpr_hong": 100,
+    "sam_3d": 250,
+    "li2022_style": 100
+  }
+}

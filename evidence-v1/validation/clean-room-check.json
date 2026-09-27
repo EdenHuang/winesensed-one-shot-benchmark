@@ -1,0 +1,108 @@
+{
+  "status": "passed",
+  "isolated_python": true,
+  "project_imports": false,
+  "csv_runs": 73,
+  "csv_queries_exact": 210991,
+  "main_table_rows_replayed": {
+    "frozen_raw": {
+      "mean": 0.9473806752037253,
+      "sample_sd": null,
+      "per_seed_top1": [
+        0.9473806752037253
+      ]
+    },
+    "sam_3d": {
+      "mean": 0.8551028327512612,
+      "sample_sd": 0.01324535049635413,
+      "per_seed_top1": [
+        0.839813736903376,
+        0.8630966239813737,
+        0.8623981373690338
+      ]
+    }
+  },
+  "recomputed_query_rank_and_top20_checks": 17180,
+  "paired": {
+    "per_run": [
+      {
+        "rescued": 49,
+        "harmed": 511,
+        "target_correct": 3607,
+        "reference_correct": 4069
+      },
+      {
+        "rescued": 53,
+        "harmed": 415,
+        "target_correct": 3707,
+        "reference_correct": 4069
+      },
+      {
+        "rescued": 52,
+        "harmed": 417,
+        "target_correct": 3704,
+        "reference_correct": 4069
+      }
+    ],
+    "query_weighted": {
+      "delta_pp": -9.22778424524641,
+      "ci95_pp": [
+        -12.339235586045232,
+        -6.625338195230679
+      ]
+    },
+    "class_macro": {
+      "delta_pp": -7.588576330239115,
+      "ci95_pp": [
+        -8.967520035498442,
+        -6.319076118228156
+      ]
+    },
+    "draws": 5000,
+    "seed": 42,
+    "unit": "class cluster",
+    "training_seed_uncertainty_included": false,
+    "multiplicity_corrected": false
+  },
+  "reconstruction": {
+    "rows": 12572,
+    "unique_images": 12121,
+    "byte_hashes_verified": 12121,
+    "dry_run": true
+  },
+  "numpy": "2.4.4",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "release_source": "image-free package plus externally provided NPZs and original image directory",
+  "commands_summary": [
+    {
+      "script": "evaluate.py",
+      "seconds": 1.2505401000016718,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate.py",
+      "seconds": 1.2318617999990238,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate.py",
+      "seconds": 1.2518294999972568,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate.py",
+      "seconds": 1.2458257000034791,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate.py",
+      "seconds": 0.4355135000005248,
+      "returncode": 0
+    },
+    {
+      "script": "rebuild_splits.py",
+      "seconds": 54.898543399998744,
+      "returncode": 0
+    }
+  ]
+}

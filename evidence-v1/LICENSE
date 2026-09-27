@@ -1,0 +1,45 @@
+LICENSE SCOPE
+
+1. Newly authored Python utilities under eval/: MIT License below.
+2. Newly authored experimental ranking results and documentation: Creative
+   Commons Attribution 4.0 International (CC BY 4.0):
+   https://creativecommons.org/licenses/by/4.0/
+   Attribute this versioned evidence package and cite the underlying WineSensed
+   dataset as described in README.md. No claim is made to third-party rights.
+3. Dataset identifiers and factual source-provenance records retain the
+   underlying source terms where applicable. This package does not relicense
+   WineSensed, Vivino content, original metadata, images, models, backgrounds,
+   or third-party code. No such media, metadata CSV/reviews, weights, or
+   third-party implementation code is distributed in this package.
+
+UPSTREAM NOTICES
+
+The Hugging Face WineSensed dataset card states CC BY-NC-ND 4.0:
+https://huggingface.co/datasets/Dakhoo/L2T-NeurIPS-2023
+The saved DTU metadata record labels its deposit CC BY-NC 4.0:
+https://data.dtu.dk/articles/dataset/WineSensed_Learning_to_Taste_A_Multimodal_Wine_Dataset/23376560
+These are source-specific observations, not a resolution of differing terms.
+Obtain the original data from its providers and consult the terms of that
+specific release. This image-free package grants no additional image rights.
+
+MIT License (eval/ utilities only)
+
+Copyright (c) 2026 Wine-label research contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

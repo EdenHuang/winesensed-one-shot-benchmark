@@ -1,0 +1,2 @@
+# Preserve the exact bytes covered by MANIFEST-SHA256.json on every OS.
+* -text

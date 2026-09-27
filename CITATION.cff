@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this versioned evidence package and the underlying WineSensed dataset."
+type: dataset
+title: "WineSensed one-shot wine-label benchmark: evidence release v1"
+authors:
+  - family-names: Huang
+    given-names: Yueh-Cheng
+version: evidence-v1
+date-released: 2026-09-27
+url: "https://github.com/EdenHuang/winesensed-one-shot-benchmark"
+repository-code: "https://github.com/EdenHuang/winesensed-one-shot-benchmark"
+abstract: "Image-free evidence snapshot of 2026-09-24: fixed benchmark and development splits, source hashes, synthesis slot records, 73 per-query rankings, and CPU evaluation utilities."

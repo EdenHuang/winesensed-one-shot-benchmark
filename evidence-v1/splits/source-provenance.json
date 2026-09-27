@@ -1,0 +1,52 @@
+{
+  "metadata_csv": {
+    "name": "images_reviews_attributes.csv",
+    "sha256": "52fa0b65c6c0c9d2030f7e6d893ee3be30b865da31346cd9cdfcb406c0983b74",
+    "source": "DTU metadata.zip",
+    "source_zip": {
+      "id": 41226051,
+      "name": "metadata.zip",
+      "size": 125561355,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/41226051",
+      "supplied_md5": "6faa2bd1432412c4b41347e5e1607fef",
+      "computed_md5": "6faa2bd1432412c4b41347e5e1607fef",
+      "mimetype": "application/zip"
+    },
+    "identity_column": "vintage_id",
+    "actual_columns": [
+      "vintage_id",
+      "image",
+      "review",
+      "experiment_id",
+      "year",
+      "winery_id",
+      "wine_alcohol",
+      "country",
+      "region",
+      "price",
+      "rating",
+      "grape"
+    ]
+  },
+  "image_archive": {
+    "repository": "Dakhoo/L2T-NeurIPS-2023",
+    "revision": "a198b934bb7267216a280295bb2273b359a80b98",
+    "path": "data/all/all.tar.gz",
+    "sha256": "80be08379db6e76d804baede82b5aa5b7325661a028a3b0384bb7a72fb2f9dee",
+    "bytes": 35409352118,
+    "url": "https://huggingface.co/datasets/Dakhoo/L2T-NeurIPS-2023/resolve/a198b934bb7267216a280295bb2273b359a80b98/data/all/all.tar.gz"
+  },
+  "license_observations": {
+    "hf_card": "CC BY-NC-ND 4.0",
+    "hf_card_url": "https://huggingface.co/datasets/Dakhoo/L2T-NeurIPS-2023",
+    "dtu_saved_record": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    "note": "Source records differ; package contains no images, reviews, source CSV, checkpoints, or backgrounds. Dataset rights are not relicensed."
+  },
+  "dataset_citation": "Warburg, Frederik Rahbæk; Hauberg, Søren; Belongie, Serge (2023). WineSensed. Learning to Taste: A Multimodal Wine Dataset. Technical University of Denmark. Dataset. https://doi.org/10.11583/DTU.23376560.v1",
+  "release_contains_images": false
+}

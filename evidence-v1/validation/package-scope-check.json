@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "images": 0,
+  "embeddings": 0,
+  "checkpoints": 0,
+  "absolute_windows_paths": 0,
+  "local_path_fields_removed": 5988,
+  "rim_hashes_preserved": true,
+  "ranking_values_changed": 0,
+  "source_media_not_redistributed": true
+}
