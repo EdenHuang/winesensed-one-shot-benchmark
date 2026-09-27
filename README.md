@@ -26,6 +26,24 @@ This snapshot does **not** contain the later flip-free 2D control, linear-head o
 
 The [snapshot README](evidence-v1/README.md) contains detailed protocols and reconstruction instructions. Its publication-pending sentence describes the snapshot's preparation date; this repository is its public destination. The underlying development repository and its history are separate.
 
+## Method names in the manuscript
+
+The IEEE Access submission manuscript (v8, naming update dated 2026-09-27) uses the following display names. They are aliases for the existing benchmark pipelines, not names of new models or Meta's SAM 3D systems. Historical method IDs, filenames and labels in the evidence snapshot remain unchanged.
+
+| Manuscript display name | Stable method ID | Localization and construction | Ranking CSVs in evidence-v1 |
+|---|---|---|---:|
+| Edge-based [4] | `icpr_hong` | Edge-based localization + rim-estimating construction | 15 |
+| SAM-based [5] | `sam_3d` | SAM localization + rim-estimating construction | 18 |
+| Frontal-assumption, adapted from Li et al. [7] | `li2022_style` | SAM localization + adapted frontal-assumption construction | 18 |
+| 2D | `original_2d` | Original 2D augmentation baseline | 18 |
+| Frozen | `frozen_raw` | Initial backbone without benchmark adaptation | 4 |
+
+Thus the legacy labels `ICPR`, `SAM-3D` and `Li 2022-style` correspond to Edge-based, SAM-based and Frontal-assumption, respectively. Both `sam_3d` and `li2022_style` use SAM localization; their geometric constructions differ. The frontal-assumption pipeline adapts the geometry of [7] to this benchmark's SAM localization and one-image, six-view protocol. It is not a reproduction of [7]'s original FCN-based pipeline. Construction-only tests that use ground-truth masks refer to **rim-estimating construction** and **frontal-assumption construction**, rather than the full localization pipelines.
+
+The reference numbers above follow the manuscript: [4] is [Single-Image Driven 3D Viewpoint Training Data Augmentation for Effective Label Recognition](https://doi.org/10.1007/978-3-031-78125-4_14); [5] is [HierarchicalWine](https://doi.org/10.1109/ICRCV67407.2025.11349206); [7] is [On Wine Label Image Data Augmentation Through Viewpoint Based Transformation](https://doi.org/10.16798/j.issn.1003-0530.2022.01.006).
+
+These five stable IDs are the only method values in the 73-run `evidence-v1/results/run-index.json`. Later `icpr_li` (edge-based localization + frontal-assumption construction), `original_2d_noflip`, linear-head and LoRA results are **not included in evidence-v1**. This naming clarification adds no results and does not replace the fixed snapshot, release archive, tag or checksums.
+
 ## Check the package
 
 Use Python 3.10 or later. NumPy is needed for ranking and paired comparisons; the independent checks used NumPy 2.4.4.
